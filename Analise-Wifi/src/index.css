@@ -1,68 +1,76 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 0;
+  font-family: "Kaisei Opti", serif;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  font-style: normal;
+  color: #FFFFFF;
 }
-button:hover {
-  border-color: #646cff;
+body {
+  background: linear-gradient(to bottom, #2C286B 50%, #752a2a  100%);
+  background-attachment: fixed;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.header {
+  padding: 2.5rem;
+  margin: auto;
+  font-size: 2rem;
+  text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.container {
+  display: flex;
+  justify-content: center; /* centraliza o conjunto na tela */
+  align-items: center;
+  gap: 100px; /* espaço entre texto e imagem */
+  padding: 40px;
+  flex-wrap: wrap; /* garante responsividade */
+}
+
+.texto-analise {
+  max-width: 600px;
+  text-align: justify;
+  color: white;
+  font-family: 'Kaisei Opti', serif;
+  line-height: 2.0;
+  font-size: 1.6rem;
+}
+
+.imagens {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.imagens img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.buttonHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.buttonHome button{
+  background-color: #2C286B;
+  color: white;
+  padding: 1.5rem;
+  border: solid 1px #A5A5A5;
+  border-radius: 16px;
+  box-shadow: 2px 9px #18153d1a;
+  cursor: pointer;
+  font-size: 2.0rem;
+  text-align: center;
+}
+
+.buttonHome :hover {
+  background-color: #322e68;
+  color: #FFFFFF;
+  opacity: 0.7;
+  transition: 0.6s;
 }
