@@ -13,7 +13,7 @@ body {
   background-attachment: fixed;
 }
 .header {
-  padding: 2.5rem;
+  padding: 1.5rem;
   margin: auto;
   font-size: 2rem;
   text-align: center;
@@ -74,3 +74,61 @@ body {
   opacity: 0.7;
   transition: 0.6s;
 }
+.container-form {
+  background-color: #1e1b4b;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-form h3 {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.container-form label {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.container-form input {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.container-form input:focus {
+  box-shadow: 0 0 0 2px #a78bfa; /* Roxinho de foco */
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: #2C286B;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+li strong {
+  color: #a78bfa;
+}
+
