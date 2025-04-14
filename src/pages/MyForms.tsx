@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from '../components/header';
 import ButtonHomePage from '../components/button';
+import { useNavigate } from 'react-router-dom';
 import '../index.css';
 
 type Comodo = {
@@ -30,6 +31,14 @@ function MyForms() {
     setComodos(newList);
   };
 
+  const navigate = useNavigate();
+
+const handleGenerateCharts = () => {
+  localStorage.setItem('comodos', JSON.stringify(comodos));
+  navigate('/graficos');
+};
+
+
   return (
     <>
       <Header />
@@ -48,7 +57,7 @@ function MyForms() {
               required
             />
 
-            <label htmlFor="sinal">Intensidade do sinal:</label>
+            <label htmlFor="sinal">Intensidade do sinal (em dbm):</label>
             <input
               type="text"
               id="sinal"
@@ -59,7 +68,7 @@ function MyForms() {
               required
             />
 
-            <label htmlFor="velocidade">Velocidade:</label>
+            <label htmlFor="velocidade">Velocidade (em Mbps):</label>
             <input
               type="text"
               id="velocidade"
@@ -92,6 +101,7 @@ function MyForms() {
               </li>
             ))}
           </ul>
+          <ButtonHomePage type="submit" text="Gerar gráficos"onClick={handleGenerateCharts}/>
         </div>
       </div>
     </>
