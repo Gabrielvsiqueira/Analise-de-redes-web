@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+# 📡 Análise de Redes Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto tem como objetivo o desenvolvimento de uma aplicação web para **análise de dados de rede Wi-Fi**, com uma **interface amigável e acessível** a todos os níveis de usuários.  
+A aplicação permite a **criação, leitura, atualização e exclusão (CRUD)** de informações relacionadas aos **níveis de sinal e velocidade da rede**, além de gerar **gráficos dinâmicos** com base nesses dados.
 
-Currently, two official plugins are available:
+## ⚙️ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ➕ Inserir dados sobre níveis de sinal e velocidade da rede  
+- ✏️ Editar dados existentes  
+- ❌ Excluir dados cadastrados  
+- 📋 Listar e visualizar todos os dados  
+- 📊 Gerar gráficos com base nas informações inseridas  
+- 🖥️ Interface intuitiva e acessível, focada na experiência do usuário
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://reactjs.org/) — Biblioteca para construção da interface  
+- JavaScript — Linguagem principal do projeto  
+- [Chart.js](https://www.chartjs.org/) — Biblioteca para criação de gráficos interativos  
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📦 Como rodar o projeto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+# Clone o repositório
+git clone git@github.com:Gabrielvsiqueira/Analise-de-redes-web.git
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Acesse a pasta do projeto
+cd analise-de-redes-web
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# Instale as dependências
+npm install
+
+# Inicie a aplicação
+npm run dev
