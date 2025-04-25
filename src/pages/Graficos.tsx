@@ -45,7 +45,7 @@ function Graficos() {
   };
 
   return (
-    <div style={{ width: '80%', margin: '0 auto', paddingTop: '50px' }}>
+    <div style={{ width: '100%', margin: '0 auto', paddingTop: '50px' }}>
       <h2 style={{
         textAlign: 'center',
         margin: '30px, auto, auto, auto',

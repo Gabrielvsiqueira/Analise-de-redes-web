@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 type ButtonProps = {
   text: string;
   onClick?: () => void;
-  to?: string; // Se quiser usar navegação por Link
+  to?: string; 
   type?: 'button' | 'submit' | 'reset';
   className?: string;
 };

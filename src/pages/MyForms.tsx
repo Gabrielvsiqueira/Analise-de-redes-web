@@ -79,7 +79,7 @@ const handleGenerateCharts = () => {
               required
             />
 
-            <ButtonHomePage type="submit" text="Adicionar" />
+            <ButtonHomePage type="submit" text="Adicionar"/>
           </div>
         </div>
       </form>
@@ -87,13 +87,14 @@ const handleGenerateCharts = () => {
       <div className='container'>
         <div className='container-form'>
           <h3>Cômodos adicionados:</h3>
-          {comodos.length === 0 && <p>Nenhum cômodo adicionado ainda.</p>}
+          {comodos.length === 0 && <p className='text-form'>Nenhum cômodo adicionado ainda.</p>}
           <ul>
             {comodos.map((item, index) => (
               <li key={index}>
                 <strong>{item.nome}</strong> - Sinal: {item.sinal} - Velocidade: {item.velocidade}
                 <br />
                 <ButtonHomePage
+                className='button-page'
                   text="Excluir"
                   type="button"
                   onClick={() => handleDelete(index)}

@@ -74,6 +74,12 @@ body {
   opacity: 0.7;
   transition: 0.6s;
 }
+
+.buttonHome .button.button-page {
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
 .container-form {
   background-color: #1e1b4b;
   padding: 30px;
@@ -86,10 +92,16 @@ body {
   gap: 20px;
 }
 
+.container-form .text-form {
+  text-align: center;
+  padding: 0.5rem;
+}
+
 .container-form h3 {
   font-size: 1.6rem;
   color: #FFFFFF;
   text-align: center;
+  align-items: center;
 }
 
 .container-form label {
@@ -107,6 +119,10 @@ body {
   outline: none;
   background-color: #f2f2f2;
   color: #000;
+}
+
+.container-form li {
+  font-size: 1.2rem;
 }
 
 .container-form input:focus {
@@ -131,4 +147,3 @@ li {
 li strong {
   color: #a78bfa;
 }
-
