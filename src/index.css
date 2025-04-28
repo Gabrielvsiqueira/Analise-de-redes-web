@@ -4,13 +4,14 @@
   margin: 0;
   padding: 0;
   font-family: "Kaisei Opti", serif;
-  font-weight: 500;
   font-style: normal;
   color: #FFFFFF;
 }
 body {
-  background: linear-gradient(to bottom, #2C286B 50%, #752a2a  100%);
-  background-attachment: fixed;
+  background-image:url(./img/background.jpg);
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
 }
 .header {
   padding: 1.5rem;
@@ -21,11 +22,11 @@ body {
 
 .container {
   display: flex;
-  justify-content: center; /* centraliza o conjunto na tela */
+  justify-content: center; 
   align-items: center;
-  gap: 100px; /* espaço entre texto e imagem */
+  gap: 100px; 
   padding: 40px;
-  flex-wrap: wrap; /* garante responsividade */
+  flex-wrap: wrap; 
 }
 
 .texto-analise {
@@ -94,7 +95,12 @@ body {
 
 .container-form .text-form {
   text-align: center;
+  font-size: 1.3rem;
   padding: 0.5rem;
+}
+
+.container-form .generic-button{
+  font-size: 1.5rem;
 }
 
 .container-form h3 {

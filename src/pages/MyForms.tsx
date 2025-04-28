@@ -79,7 +79,7 @@ const handleGenerateCharts = () => {
               required
             />
 
-            <ButtonHomePage type="submit" text="Adicionar"/>
+            <ButtonHomePage className="generic-button" type="submit" text="Adicionar"/>
           </div>
         </div>
       </form>
@@ -102,7 +102,7 @@ const handleGenerateCharts = () => {
               </li>
             ))}
           </ul>
-          <ButtonHomePage type="submit" text="Gerar gráficos"onClick={handleGenerateCharts}/>
+          <ButtonHomePage className='generic-button' type="submit" text="Gerar gráficos"onClick={handleGenerateCharts}/>
         </div>
       </div>
     </>
