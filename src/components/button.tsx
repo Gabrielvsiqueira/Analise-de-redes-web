@@ -1,26 +1,20 @@
 import '../index.css';
-import { Link } from 'react-router-dom';
+import  Button from 'react-bootstrap/Button';
 
-type ButtonProps = {
-  text: string;
+type CustomButtonProps = {
+  label: string;
   onClick?: () => void;
   to?: string; 
   type?: 'button' | 'submit' | 'reset';
-  className?: string;
+  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info' | 'light' | 'Dark' | 'Link';
+  size?: 'sm' | 'lg';
+  disabled?: boolean;
 };
 
-function ButtonHomePage({ text, onClick, to, type = 'button', className = '' }: ButtonProps) {
-  const button = (
-    <button onClick={onClick} type={type} className={`button ${className}`}>
-      {text}
-    </button>
-  );
-
+function CustomButton({label, onClick, type = 'button', variant= 'primary', size= 'lg',}: CustomButtonProps) {
   return (
-    <div className="buttonHome">
-      {to ? <Link to={to}>{button}</Link> : button}
-    </div>
+    <Button variant={variant} type={type} size={size} onClick={onClick}>{label}</Button>
   );
 }
 
-export default ButtonHomePage;
+export default CustomButton;
