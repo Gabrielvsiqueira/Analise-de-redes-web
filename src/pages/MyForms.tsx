@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from '../components/header';
-import ButtonHomePage from '../components/button';
+import CustomButton from '../components/button';
+
 import { useNavigate } from 'react-router-dom';
 import '../index.css';
 
@@ -43,7 +44,7 @@ const handleGenerateCharts = () => {
     <>
       <Header />
       <form onSubmit={handleAdd}>
-        <h3 className="header">Adicionar cômodos para análise da rede:</h3>
+        <h3 className="header">Adicione os cômodos que deseja analisar a qualidade da rede:</h3>
         <div className='container'>
           <div className='container-form'>
             <label htmlFor="nome">Nome:</label>
@@ -79,7 +80,7 @@ const handleGenerateCharts = () => {
               required
             />
 
-            <ButtonHomePage className="generic-button" type="submit" text="Adicionar"/>
+            <CustomButton type="submit" label="Adicionar"/>
           </div>
         </div>
       </form>
@@ -93,16 +94,15 @@ const handleGenerateCharts = () => {
               <li key={index}>
                 <strong>{item.nome}</strong> - Sinal: {item.sinal} - Velocidade: {item.velocidade}
                 <br />
-                <ButtonHomePage
-                className='button-page'
-                  text="Excluir"
+                <CustomButton
+                  label="Excluir"
                   type="button"
                   onClick={() => handleDelete(index)}
                 />
               </li>
             ))}
           </ul>
-          <ButtonHomePage className='generic-button' type="submit" text="Gerar gráficos"onClick={handleGenerateCharts}/>
+          <CustomButton type="submit" label="Gerar gráficos"onClick={handleGenerateCharts}/>
         </div>
       </div>
     </>

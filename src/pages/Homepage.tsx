@@ -1,5 +1,6 @@
 import Header from "../components/header";
-import ButtonHomePage from "../components/button";
+import CustomButton from "../components/button";
+
 import '../index.css';
 
 function HomePage(){
@@ -18,9 +19,8 @@ function HomePage(){
                 <img src="../src/img/image.webp" alt="grafico de crescimento." />
             </div>
         </div>
-        <ButtonHomePage text="Iniciar Análise" to="/MyForms"/>
+        <CustomButton label="Iniciar Análise" to="/MyForms"/>
         </>
     )
 }
-
 export default HomePage;
