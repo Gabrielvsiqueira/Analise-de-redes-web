@@ -39,7 +39,7 @@ function Graficos() {
       {
         label: 'Velocidade',
         data: comodos.map(c => parseFloat(c.velocidade)),
-        backgroundColor: 'rgba(75, 158, 50, 0.6)',
+        backgroundColor: 'rgba(97, 255, 49, 0.6)',
       },
     ],
   };

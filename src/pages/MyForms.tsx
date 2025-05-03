@@ -93,7 +93,6 @@ const handleGenerateCharts = () => {
             {comodos.map((item, index) => (
               <li key={index}>
                 <strong>{item.nome}</strong> - Sinal: {item.sinal} - Velocidade: {item.velocidade}
-                <br />
                 <CustomButton
                   label="Excluir"
                   type="button"
