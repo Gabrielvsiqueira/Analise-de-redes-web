@@ -15,7 +15,7 @@ A aplicação permite a **criação, leitura, atualização e exclusão (CRUD)**
 ## 🛠️ Tecnologias Utilizadas
 
 - [React](https://reactjs.org/) — Biblioteca para construção da interface  
-- JavaScript — Linguagem principal do projeto  
+- Typescript — Linguagem principal do projeto  
 - [Chart.js](https://www.chartjs.org/) — Biblioteca para criação de gráficos interativos  
 
 ## 📦 Como rodar o projeto
