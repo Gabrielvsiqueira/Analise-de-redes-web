@@ -9,10 +9,11 @@ type Comodo = {
   nome: string;
   sinal: string;
   velocidade: string;
+  data: string;
 };
 
 function MyForms() {
-  const [comodo, setComodo] = useState({ nome: '', sinal: '', velocidade: '' });
+  const [comodo, setComodo] = useState({ nome: '', sinal: '', velocidade: '', data: ''});
   const [comodos, setComodos] = useState<Comodo[]>([]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,9 +22,9 @@ function MyForms() {
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
-    if (comodo.nome && comodo.sinal && comodo.velocidade) {
+    if (comodo.nome && comodo.sinal && comodo.velocidade && comodo.data) {
       setComodos([...comodos, comodo]);
-      setComodo({ nome: '', sinal: '', velocidade: '' }); // Limpa os campos
+      setComodo({ nome: '', sinal: '', velocidade: '', data: ''}); // Limpa os campos
     }
   };
 
@@ -79,6 +80,16 @@ const handleGenerateCharts = () => {
               onChange={handleChange}
               required
             />
+            <label htmlFor="Data">Data e hora da medição:</label>
+            <input
+              type="datetime-local"
+              id="data"
+              name="data"
+              placeholder="Digite a data da medição"
+              value={comodo.data}
+              onChange={handleChange}
+              required
+            />
 
             <CustomButton type="submit" label="Adicionar"/>
           </div>
@@ -92,7 +103,7 @@ const handleGenerateCharts = () => {
           <ul>
             {comodos.map((item, index) => (
               <li key={index}>
-                <strong>{item.nome}</strong> - Sinal: {item.sinal} - Velocidade: {item.velocidade}
+                <strong>{item.nome}</strong> - Sinal: {item.sinal} - Velocidade: {item.velocidade} - DateTime: {item.data}
                 <br />
                 <CustomButton
                   label="Excluir"

@@ -16,6 +16,7 @@ type Comodo = {
   nome: string;
   sinal: string;
   velocidade: string;
+  date: string;
 };
 
 function Graficos() {
