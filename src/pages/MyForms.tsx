@@ -13,7 +13,7 @@ type Comodo = {
 };
 
 function MyForms() {
-  const [comodo, setComodo] = useState({ nome: '', sinal: '', velocidade: '', data: ''});
+  const [comodo, setComodo] = useState({ nome: '', sinal: '', velocidade: '', data: '' });
   const [comodos, setComodos] = useState<Comodo[]>([]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,7 +24,7 @@ function MyForms() {
     e.preventDefault();
     if (comodo.nome && comodo.sinal && comodo.velocidade && comodo.data) {
       setComodos([...comodos, comodo]);
-      setComodo({ nome: '', sinal: '', velocidade: '', data: ''}); // Limpa os campos
+      setComodo({ nome: '', sinal: '', velocidade: '', data: '' }); // Limpa os campos
     }
   };
 
@@ -35,11 +35,10 @@ function MyForms() {
 
   const navigate = useNavigate();
 
-const handleGenerateCharts = () => {
-  localStorage.setItem('comodos', JSON.stringify(comodos));
-  navigate('/graficos');
-};
-
+  const handleGenerateCharts = () => {
+    localStorage.setItem('comodos', JSON.stringify(comodos));
+    navigate('/graficos');
+  };
 
   return (
     <>
@@ -80,7 +79,8 @@ const handleGenerateCharts = () => {
               onChange={handleChange}
               required
             />
-            <label htmlFor="Data">Data e hora da medição:</label>
+            
+            <label htmlFor="data">Data e hora da medição:</label>
             <input
               type="datetime-local"
               id="data"
@@ -91,7 +91,7 @@ const handleGenerateCharts = () => {
               required
             />
 
-            <CustomButton type="submit" label="Adicionar"/>
+            <CustomButton type="submit" label="Adicionar" />
           </div>
         </div>
       </form>
@@ -101,19 +101,25 @@ const handleGenerateCharts = () => {
           <h3>Cômodos adicionados:</h3>
           {comodos.length === 0 && <p className='text-form'>Nenhum cômodo adicionado ainda.</p>}
           <ul>
-            {comodos.map((item, index) => (
-              <li key={index}>
-                <strong>{item.nome}</strong> - Sinal: {item.sinal} - Velocidade: {item.velocidade} - DateTime: {item.data}
-                <br />
-                <CustomButton
-                  label="Excluir"
-                  type="button"
-                  onClick={() => handleDelete(index)}
-                />
-              </li>
-            ))}
+            {comodos.map((item, index) => {
+              const [dataParte, horaParte] = item.data.split('T'); 
+              const [ano, mes, dia] = dataParte.split('-');
+              const dataFormatada = `${dia}/${mes}/${ano}`; 
+              return (
+                <li key={index}>
+                  <strong>{item.nome}</strong> - Sinal: {item.sinal} - Velocidade: {item.velocidade} 
+                  - Data: {dataFormatada} - Hora: {horaParte}
+                  <br />
+                  <CustomButton
+                    label="Excluir"
+                    type="button"
+                    onClick={() => handleDelete(index)}
+                  />
+                </li>
+              );
+            })}
           </ul>
-          <CustomButton type="submit" label="Gerar gráficos"onClick={handleGenerateCharts}/>
+          <CustomButton type="submit" label="Gerar gráficos" onClick={handleGenerateCharts} />
         </div>
       </div>
     </>
