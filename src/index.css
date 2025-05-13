@@ -105,3 +105,12 @@ ul button {
 li strong {
   color: #ec6868;
 }
+
+.homeButton {
+  display: flex;
+  justify-content: center;
+}
+
+.speedTest {
+  border-radius: 1rem;
+}
