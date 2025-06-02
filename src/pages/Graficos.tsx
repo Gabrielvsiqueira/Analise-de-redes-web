@@ -78,7 +78,7 @@ function Graficos() {
   const handleExport = () => {
     const csvHeader = "Nome,Sinal,Velocidade,Data\n";
     const csvRows = comodos.map(c =>
-      `${c.nome},${c.sinal},${c.velocidade},${c.date}`
+      `${c.nome},${c.sinal},${c.velocidade}`
     );
     const csv = csvHeader + csvRows.join("\n");
     const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
